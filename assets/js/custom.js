@@ -22,7 +22,12 @@
     	data : { id : show_id },
     	method : "POST",
     	success : function(data){
-    		alert(data);
+    		let single_data = JSON.parse(data);
+    		$('img#single_student_img').attr('src', 'assets/media/students/' + single_data.photo );
+    		 $('h2#single_name').text(single_data.name);
+    		 $('td#single_name').text(single_data.name);
+    		 $('td#single_email').text(single_data.email);
+    		 $('td#single_cell').text(single_data.cell);
     	}
 
     });

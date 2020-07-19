@@ -46,36 +46,31 @@
 		</div>
 	</div>
 
-   <!-- SINGLE Student modal -->
+   <!-- SINGLE Student show modal -->
 	<div id="single_student_modal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
 					<h2 class="text-center">Single Student Data</h2>
 					<hr>
-					<img class="shadow" style="width: 200px; height: 200px; display: block;margin: auto; border-radius: 50%; border: 10px solid #fff;" src="assets/media/img/pp_photo/american-passport-photo.jpg" alt="img">
-					<h2 class="text-center">Nayon Babu</h2>
+					<img id="single_student_img" class="shadow" style="width: 200px; height: 200px; display: block;margin: auto; border-radius: 50%; border: 10px solid #fff;" src="" alt="img">
+					<h2 id="single_name" class="text-center"></h2>
                        
                      <table class="table table-striped">
                      	<tr>
                      		<td>Name :</td>
-                     		<td>Nayon Babu</td>
+                     		<td id="single_name"></td>
                      	</tr>
 
 
                      	<tr>
-                     		<td>Name :</td>
-                     		<td>Nayon Babu</td>
+                     		<td>Email :</td>
+                     		<td id="single_email"></td>
                      	</tr>
 
                      	<tr>
-                     		<td>Name :</td>
-                     		<td>Nayon Babu</td>
-                     	</tr>
-
-                     	<tr>
-                     		<td>Name :</td>
-                     		<td>Nayon Babu</td>
+                     		<td>Cell :</td>
+                     		<td id="single_cell"></td>
                      	</tr>
 
                      </table>  
