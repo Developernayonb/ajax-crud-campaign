@@ -38,13 +38,57 @@
 						</div>
 						<div class="form-group">
                            <label for=""></label>
-						   <input class="btn btn-primary" name="name" type="submit" value="add student">			 	
+						   <input class="btn btn-primary" name="add" type="submit" value="add student">			 	
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+    
+
+    <!-- Student Update modal -->
+	<div id="student_update_modal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<h2>Upadate student</h2>
+					<div class="mess"></div>
+					<hr>
+					<form id="update_student_form" action="" method="POST" enctype="multipart/form-data">
+						<div class="form-group">
+                           <label for="">Name</label>
+						   <input class="form-control" name="name" type="text">
+						   <input type="hidden" name="student_id">
+
+						</div>
+
+						<div class="form-group">
+                           <label for="">Email</label>
+						   <input class="form-control" name="email" type="text">			 	
+						</div>
+						<div class="form-group">
+                           <label for="">Cell</label>
+						   <input class="form-control" name="cell" type="text">			 	
+						</div>
+						<div class="form-group">
+							<img style="width: 200px;" src="" alt="">
+							<input type="hidden" name="old_photo">
+						</div>
+						<div class="form-group">
+                           <label for="">Photo</label>
+						   <input class="form-control" name="new_photo" type="file">			 	
+						</div>
+						<div class="form-group">
+                           <label for=""></label>
+						   <input class="btn btn-primary" name="add" type="submit" value="Update student">		 	
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
    <!-- SINGLE Student show modal -->
 	<div id="single_student_modal" class="modal fade">

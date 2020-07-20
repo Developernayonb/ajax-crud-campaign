@@ -112,6 +112,55 @@ $(document).on('click','a#delete_student', function(){
 });
 
 
+// Edit Student Data
+
+$(document).on('click','a#edit_student', function(e){
+ e.preventDefault();
+ 
+ let edit_id = $(this).attr('chatro_id');
+ $.ajax({
+ 	url : 'inc/ajax/edit_student.php',
+ 	data : { id : edit_id },
+ 	method : "POST",
+ 	success : function(data){
+ 		let edit_data = JSON.parse(data);
+ 		$('#student_update_modal input[name="name"]').val(edit_data.name);
+ 		$('#student_update_modal input[name="student_id"]').val(edit_data.id);
+ 		$('#student_update_modal input[name="email"]').val(edit_data.email);
+ 		$('#student_update_modal input[name="cell"]').val(edit_data.cell);
+ 		$('#student_update_modal input[name="old_photo"]').val(edit_data.photo);
+ 		$('#student_update_modal img').attr('src', 'assets/media/students/' + edit_data.photo);
+ 	}
+ });
+ 
+  $('#student_update_modal').modal('show');
+});
+
+
+// Update student data
+
+$(document).on('submit','form#update_student_form', function(e){
+  e.preventDefault();
+
+  $.ajax({
+  	url : 'inc/ajax/update_student.php',
+  	data : new FormData(this),
+  	contentType : false,
+  	processData : false,
+  	method : "POST",
+  	success : function(data){
+
+  		$('#student_update_modal').modal('hide');
+
+  		$('.mess_all').html('<p class="alert alert-success">Student data update successfull! <button class="close" data-dismiss="alert">&times;</button></p>');
+
+		 allStudentData();
+  	}
+  })
+});
+
+
+
 
 
 
